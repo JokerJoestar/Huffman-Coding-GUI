@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane fx:id="scrollChart" maxHeight="400.0" maxWidth="505.0" minHeight="400.0" minWidth="505.0" prefHeight="400.0" prefWidth="505.0" style="-fx-background-color: #213222;" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
+      <BarChart fx:id="barChart" legendVisible="false" prefHeight="370.0" prefWidth="492.0" style="-fx-focus-color: transparent;">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+</ScrollPane>
