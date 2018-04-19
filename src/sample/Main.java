@@ -14,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Main.stg[0] = primaryStage;
+        stg[0] = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("fxml/mainScene.fxml"));
 
         primaryStage.setTitle("Huffman Coding");

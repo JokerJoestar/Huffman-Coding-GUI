@@ -28,7 +28,7 @@ public class Controller2 implements Initializable {
     private Text text;
 
     @FXML
-    private TableView<Map.Entry<Character, String>> table;
+    private TableView<Map.Entry<Character, String>> table = new TableView<>(items);
     @FXML
     private TableColumn<Map.Entry<Character, String>, String> column1;
     @FXML
@@ -71,14 +71,12 @@ public class Controller2 implements Initializable {
                             break;
                     }
 
-                    SimpleStringProperty exit = new SimpleStringProperty(key);
-                    return exit;
+                    return new SimpleStringProperty(key);
                 });
 
         column2.setCellValueFactory(
                 param -> new SimpleStringProperty(String.valueOf(param.getValue().getValue())));
 
-        table = new TableView<>(items);
         items = FXCollections.observableArrayList(codes.entrySet());
         table.setItems(items);
         table.getColumns().addAll(column1, column2);

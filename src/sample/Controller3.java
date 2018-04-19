@@ -62,8 +62,9 @@ public class Controller3 {
         statsStage.setScene(new Scene(scrollChart, 505, 400));
         statsStage.setResizable(false);
         statsStage.getIcons().add(Main.appIcon);
-        barChart.setPrefWidth(barsCount*25);
-        barChart.setMinWidth(barsCount*25);
+
+        barChart.setPrefWidth(barsCount * 30);
+        barChart.setMinWidth(barsCount * 30);
         scrollChart.setContent(barChart);
 
         for (Node n:barChart.lookupAll(".default-color0.chart-bar"))
