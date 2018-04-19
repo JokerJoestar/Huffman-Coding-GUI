@@ -31,8 +31,11 @@ public class Huffman {
     }
 
     private void setEncodedText() {
+        StringBuilder builder = new StringBuilder();
         for (char ch : inputText.toCharArray())
-            encodedText += codesMap.get(ch);
+            builder.append(codesMap.get(ch));
+
+        encodedText = builder.toString();
     }
 
     private void setDecodedText() {
@@ -49,10 +52,13 @@ public class Huffman {
 
                 i++;
             }
-
-            if (tempNode != null)
+            if (tempNode != null) {
+                StringBuilder builder = new StringBuilder();
                 if (tempNode.chars.length() == 1)
-                    decodedText += tempNode.chars;
+                    builder.append(tempNode.chars);
+
+                decodedText = builder.toString();
+            }
         }
     }
 
